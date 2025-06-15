@@ -1,0 +1,39 @@
+# logging:
+#     level:
+#         root: DEBUG
+#         com.bhp.skrg: DEBUG
+
+application:
+  attachment:
+    upload-dir: D:\SEKORAGA\data\attachments
+logging:
+  level:
+    org:
+      springframework: DEBUG
+      hibernate:
+        SQL: DEBUG
+        type:
+          descriptor:
+            sql: TRACE
+
+spring:
+  application:
+    name: Sekoraga
+  profiles:
+    active: dev
+  security:
+    authentication:
+      jwt:
+        base64-secret: Sk54B1+chODFI7q0Ugez6SadCMYyZpfH28EE+Dag2dN3ifCQYXt4qn7FtGMiAva3UgVNqtqjjtiHY3+Ma+Kdvw==
+        token-validity-in-seconds: 3600 # 30 minutes
+        token-validity-in-seconds-for-remember-me: 2592000 # 30 days
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 5MB
+
+server:
+  port: 8081
+
+upload:
+  dir: D:\SEKORAGA\data\attachments
